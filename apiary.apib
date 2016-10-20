@@ -28,7 +28,12 @@ $ curl -X POST \
   "http://api.yesjob.suitdev.com/v1/user/login"
 ```
 
-+ Request (application/json)
++ Request (multipart/form-data)
+
+    + Headers
+
+        Cache-Control: no-cache
+        Connection: keep-alive
 
     + Body
 
@@ -37,13 +42,12 @@ $ curl -X POST \
                "password": "password"
             }
 
-+ Response 201
++ Response 201 (application/json)
 
     + Headers
 
         Accept-Charset: utf-8
         Connection: keep-alive
-        Content-Type: application/json
 
     + Body
 
