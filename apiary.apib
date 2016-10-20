@@ -15,9 +15,22 @@ The Authorization Tokens based on web authentication scheme relies on HTTP's aut
 
 ### Create an Authorization Token [POST]
 
+Create a new authorization token for an authenticated user. This authorization token may be used to access protected resources.
+
+**Example:**
+
 ```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
+$ curl -i \
+  --request POST \
+  --user "test@test.test:test" \
+  --data-urlencode "tokenDescription=What's this token for?" \
+  https://api.apiary.io/authorization
+$ curl -i \
+  --request POST \
+  --user "test@test.test:test" \
+  --data-urlencode "tokenDescription=What's this token for?" \
+  --data-urlencode "tokenRegenerate=true" \
+  https://api.apiary.io/authorization
 ```
 
 + Request (application/json)
