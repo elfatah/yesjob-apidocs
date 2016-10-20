@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://api.yesjob.suitdev.com/v1/
+HOST: http://api.yesjob.com/v1/
 
 # YesJob Development API
 
@@ -20,12 +20,12 @@ Create a new authorization token for an authenticated user. This authorization t
 **Example:**
 
 ```
-$ curl -X POST \
-  -H "Cache-Control: no-cache" \
-  -H "Content-Type: multipart/form-data;" \
-  -F "email=test@suitmedia.com" \
-  -F "password=test" \
-  "http://api.yesjob.suitdev.com/v1/user/login"
+curl --request POST \
+  --url http://api.yesjob.dev/user/login \
+  --header 'cache-control: no-cache' \
+  --header 'content-type: multipart/form-data' \
+  --form email=test@suitmedia.com \
+  --form password=test
 ```
 
 + Request (multipart/form-data)
@@ -37,10 +37,8 @@ $ curl -X POST \
 
     + Body
 
-            {
-               "email": "emailname@domain.com",
-               "password": "password"
-            }
+            form email=test@suitmedia.com
+            form password=test
 
 + Response 201 (application/json)
 
