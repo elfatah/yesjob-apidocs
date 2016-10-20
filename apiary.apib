@@ -9,6 +9,8 @@ This section documents YesJob's API, for developers who want to write code that 
 
 ## Basic Auth [/user/login]
 
+Basic Authentication is an optional authentication handler for external clients. Due to the complexity of OAuth authentication, Basic authentication can be useful during development. However, Basic authentication requires passing your username and password on every request, as well as giving your credentials to clients.
+
 ### Basic Auth [POST]
 
 + Request (application/json)
