@@ -7,20 +7,21 @@ This section documents YesJob's API, for developers who want to write code that 
 
 ## Group Authentication
 
-## Web Auth [/user/login]
+## Authorization Tokens [/user/login]
 
 The YesJob API offers a very simple way of authenticating the API that should only be used for testing and development purposes. When building an application you should ultimately use the OAuth authentication scheme for allowing YesJobs users to grant access to their data for your application. Note that this authentication scheme is off by default for every YesJob user.
 
-The web authentication scheme relies on HTTP's authentication [RFC](http://www.ietf.org/rfc/rfc2617.txt) to authenticate clients of the YesJob API using a YesJob **email** and **password**. This authentication scheme may be limited or turned off by default in future versions of the YesJob platform and therefore should not be relied upon for production application development. It is a very simple and useful way to get started with the API.
+The Authorization Tokens based on web authentication scheme relies on HTTP's authentication [RFC](http://www.ietf.org/rfc/rfc2617.txt) to authenticate clients of the YesJob API using a YesJob **email** and **password**. This authentication scheme may be limited or turned off by default in future versions of the YesJob platform and therefore should not be relied upon for production application development. It is a very simple and useful way to get started with the API.
 
-### Get User Token [POST]
+### Create an Authorization Token [POST]
 
 + Request (application/json)
+    + Body
 
-        {
-            "email": "test@suitmedia.com",
-            "password": "test"
-        }
+            {
+               "email": "emailname@domain.com",
+               "password": "password"
+            }
 
 + Response 201 (application/json)
 
