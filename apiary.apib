@@ -16,6 +16,7 @@ The Authorization Tokens based on web authentication scheme relies on HTTP's aut
 ### Create an Authorization Token [POST]
 
 + Request (application/json)
+
     + Body
 
             {
@@ -25,30 +26,36 @@ The Authorization Tokens based on web authentication scheme relies on HTTP's aut
 
 + Response 201 (application/json)
 
-    + Headers
-
-            Location: /questions/2
-
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "emailname@domain.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Facebook Auth [/user/fblogin]
