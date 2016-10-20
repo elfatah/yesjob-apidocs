@@ -1,13 +1,459 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://api.yesjob.suitdev.com/v1/
 
-# soparsihotang
+# YesJob Development API
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+YesJob is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+## Group Authentication
 
-### List All Questions [GET]
+## Basic Auth [/user/login]
+
+### Basic Auth [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+
+## Facebook Auth [/user/fblogin]
+
+### Facebook Auth [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Twitter Auth [/user/twlogin]
+
+### Twitter Auth[POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Sign-Out [/user/logout]
+
+### Logout [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Group Registration
+
+## Register [/user/register]
+
+### User Registration [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Checking Email [/user/check/{email}]
+
+### Check Email [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Verifying Email [/user/sendverification/{email}]
+
+### Send Verification [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Forgotted Password [/user/forgotpassword/{email}]
+
+### Forgot Password [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Register GcmId [/user/registergcmid]
+
+### Register GcmId [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Un-Register GcmId [/user/unregistergcmid]
+
+### Un-Register GcmId [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+
+## Group Masterdata
+
+## Countries [/masterdata/countries]
+
+### List All Countries [GET]
 
 + Response 200 (application/json)
 
@@ -33,11 +479,1655 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             }
         ]
 
-### Create a New Question [POST]
+## Regions [/masterdata/regions/{country_id}]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+### List Regions by Country [GET]
+
++ Parameters
+    + country_id (number) - ID of the Country in the form of an integer
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Cities [/masterdata/cities/{region_id}]
+
+### List Cities by Region [GET]
+
++ Parameters
+    + region_id (number) - ID of the Region in the form of an integer
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Areas [/masterdata/areas/{city_id}]
+
+### List Areas by Region [GET]
+
++ Parameters
+    + city_id (number) - ID of the City in the form of an integer
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+        
+## Environments [/masterdata/environments]
+
+### List All Environments [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+        
+## Industries [/masterdata/industries]
+
+### List All Industries [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+
+## Skills [/masterdata/skills/{industry_id}]
+
+### List Skills by Industry [GET]
+
++ Parameters
+    + industry_id (number) - ID of the Industry in the form of an integer
+    
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+            
+## Professions [/masterdata/professions/{industry_id}]
+
+### List Professions by Industry [GET]
+
++ Parameters
+    + industry_id (number) - ID of the Industry in the form of an integer
+    
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+            
+## Degrees [/masterdata/degrees]
+
+### List All Degrees [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+            
+## Majors [/masterdata/majors/{degree_id}]
+
+### List Majors by Degree [GET]
+
++ Parameters
+    + degree_id (number) - ID of the Degree in the form of an integer
+    
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+            
+## Languages [/masterdata/languages]
+
+### List All Languages [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+            
+## Group Company
+
+Resources related to questions in the API.
+
+## Company [/company/{id}]
+
+A Question object has the following attributes:
+
++ company
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + id: 1 (required, number) - ID of the Question in form of an integer
+
+### View a Company Detail [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+
+## Companies [/company/all]
+
+### List All Companies [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Link: </questions?page=2>; rel="next"
+
+    + Body
+
+            [
+                {
+                    "question": "Favourite programming language?",
+                    "published_at": "2014-11-11T08:40:51.620Z",
+                    "url": "/questions/1",
+                    "choices": [
+                        {
+                            "choice": "Swift",
+                            "url": "/questions/1/choices/1",
+                            "votes": 2048
+                        }, {
+                            "choice": "Python",
+                            "url": "/questions/1/choices/2",
+                            "votes": 1024
+                        }, {
+                            "choice": "Objective-C",
+                            "url": "/questions/1/choices/3",
+                            "votes": 512
+                        }, {
+                            "choice": "Ruby",
+                            "url": "/questions/1/choices/4",
+                            "votes": 256
+                        }
+                    ]
+                }
+            ]
+            
+## Group Vacancy
+
+Resources related to questions in the API.
+
+## Vacancy [/vacancy/{id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + id: 1 (required, number) - ID of the Question in form of an integer
+
+### View a Vacancy Detail [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+
+## Vacancies [/vacancy/all]
+
+### List All Vacancies [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Link: </questions?page=2>; rel="next"
+
+    + Body
+
+            [
+                {
+                    "question": "Favourite programming language?",
+                    "published_at": "2014-11-11T08:40:51.620Z",
+                    "url": "/questions/1",
+                    "choices": [
+                        {
+                            "choice": "Swift",
+                            "url": "/questions/1/choices/1",
+                            "votes": 2048
+                        }, {
+                            "choice": "Python",
+                            "url": "/questions/1/choices/2",
+                            "votes": 1024
+                        }, {
+                            "choice": "Objective-C",
+                            "url": "/questions/1/choices/3",
+                            "votes": 512
+                        }, {
+                            "choice": "Ruby",
+                            "url": "/questions/1/choices/4",
+                            "votes": 256
+                        }
+                    ]
+                }
+            ]
+            
+## Trending Vacancies [/vacancy/trending]
+
+### List Trending Vacancies [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Link: </questions?page=2>; rel="next"
+
+    + Body
+
+            [
+                {
+                    "question": "Favourite programming language?",
+                    "published_at": "2014-11-11T08:40:51.620Z",
+                    "url": "/questions/1",
+                    "choices": [
+                        {
+                            "choice": "Swift",
+                            "url": "/questions/1/choices/1",
+                            "votes": 2048
+                        }, {
+                            "choice": "Python",
+                            "url": "/questions/1/choices/2",
+                            "votes": 1024
+                        }, {
+                            "choice": "Objective-C",
+                            "url": "/questions/1/choices/3",
+                            "votes": 512
+                        }, {
+                            "choice": "Ruby",
+                            "url": "/questions/1/choices/4",
+                            "votes": 256
+                        }
+                    ]
+                }
+            ]
+            
+## Archive Vacancies [/vacancy/archive]
+
+### List Archive Vacancies [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Link: </questions?page=2>; rel="next"
+
+    + Body
+
+            [
+                {
+                    "question": "Favourite programming language?",
+                    "published_at": "2014-11-11T08:40:51.620Z",
+                    "url": "/questions/1",
+                    "choices": [
+                        {
+                            "choice": "Swift",
+                            "url": "/questions/1/choices/1",
+                            "votes": 2048
+                        }, {
+                            "choice": "Python",
+                            "url": "/questions/1/choices/2",
+                            "votes": 1024
+                        }, {
+                            "choice": "Objective-C",
+                            "url": "/questions/1/choices/3",
+                            "votes": 512
+                        }, {
+                            "choice": "Ruby",
+                            "url": "/questions/1/choices/4",
+                            "votes": 256
+                        }
+                    ]
+                }
+            ]
+
+## Matched Vacancies [/vacancy/matched/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Matched Vacancies of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Matched Interested Vacancies [/vacancy/matched/{user_id}/interested]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Matched Interested Vacancies of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Matched Not-Interested Vacancies [/vacancy/matched/{user_id}/notinterested]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Matched Not-Interested Vacancies of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Group User Profile
+
+Resources related to questions in the API.
+
+## Profile [/profile/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### View User Profile [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Update Profile [/profile/{user_id}/update]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Update User Profile [GET]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Experiences [/profile/experiences/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Experiences of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Experience [/profile/experience/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Experience of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Educations [/profile/educations/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Educations of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Education [/profile/education/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Education of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Organizations [/profile/organizations/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Organizations of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Organization [/profile/organization/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Organization of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Languages [/profile/languages/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Languages of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Language [/profile/language/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Language of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Skills [/profile/skills/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Skills of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Skill [/profile/skill/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Skill of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Interested Industries [/profile/interested/industries/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Interested Industries of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Interested Industry [/profile/interested/industry/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Interested Industry of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Interested Skills [/profile/interested/skills/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Interested Skills of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Interested Skill [/profile/interested/skill/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Interested Skill of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Profile Interested Professions [/profile/interested/professions/{user_id}]
+
+A Question object has the following attributes:
+
++ vacancy
++ published_at - An ISO8601 date when the question was published.
++ url
++ choices - An array of Choice objects.
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### List Interested Professions of User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Add Interested Profession [/profile/interested/profession/{user_id}/add]
+
++ Parameters
+    + user_id: 1 (required, number) - ID of the Question in form of an integer
+
+### Add Interested Profession of User [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Group Account
+
+## Account Detail [/user/me]
+
+### View an Account Detail [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Update Account [/user/me/update]
+
+### Update Account [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Update Social Media [/user/me/updatesocmed]
+
+### Update Social Media Account [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Settings [/user/{user_id}/settings]
+
+### View an Account Settings [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2014-11-11T08:40:51.620Z",
+            "url": "/questions/1",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "url": "/questions/1/choices/1",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "url": "/questions/1/choices/2",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "url": "/questions/1/choices/3",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "url": "/questions/1/choices/4",
+                    "votes": 256
+                }
+            ]
+        }
+        
+## Update Setting [/user/{user_id}/settings/update]
+
+### Update Account Settings [POST]
 
 + Request (application/json)
 
