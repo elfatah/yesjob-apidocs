@@ -20,12 +20,12 @@ Create a new authorization token for an authenticated user. This authorization t
 **Example:**
 
 ```
-$ curl -X POST
-  -H "Cache-Control: no-cache"
-  -H "Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
-  -F "email=test@suitmedia.com"
-  -F "password=test"
-  "http://api.yesjob.dev/user/login"
+$ curl -X POST \
+  -H "Cache-Control: no-cache" \
+  -H "Content-Type: multipart/form-data;" \
+  -F "email=test@suitmedia.com" \
+  -F "password=test" \
+  "http://api.yesjob.suitdev.com/v1/user/login"
 ```
 
 + Request (application/json)
