@@ -20,17 +20,12 @@ Create a new authorization token for an authenticated user. This authorization t
 **Example:**
 
 ```
-$ curl -i \
-  --request POST \
-  --user "test@test.test:test" \
-  --data-urlencode "tokenDescription=What's this token for?" \
-  https://api.apiary.io/authorization
-$ curl -i \
-  --request POST \
-  --user "test@test.test:test" \
-  --data-urlencode "tokenDescription=What's this token for?" \
-  --data-urlencode "tokenRegenerate=true" \
-  https://api.apiary.io/authorization
+$ curl -X POST
+  -H "Cache-Control: no-cache"
+  -H "Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
+  -F "email=test@suitmedia.com"
+  -F "password=test"
+  "http://api.yesjob.dev/user/login"
 ```
 
 + Request (application/json)
