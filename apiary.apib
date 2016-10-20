@@ -3,7 +3,7 @@ HOST: http://api.yesjob.suitdev.com/v1/
 
 # YesJob Development API
 
-YesJob is a simple API allowing consumers to view polls and vote in them.
+This section documents YesJob's API, for developers who want to write code that interacts with YesJob sites and their data.
 
 ## Group Authentication
 
@@ -94,7 +94,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Twitter Auth [/user/twlogin]
 
 ### Twitter Auth[POST]
@@ -138,7 +138,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Sign-Out [/user/logout]
 
 ### Logout [POST]
@@ -182,7 +182,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Group Registration
 
 ## Register [/user/register]
@@ -228,7 +228,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Checking Email [/user/check/{email}]
 
 ### Check Email [POST]
@@ -272,7 +272,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Verifying Email [/user/sendverification/{email}]
 
 ### Send Verification [POST]
@@ -316,7 +316,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Forgotted Password [/user/forgotpassword/{email}]
 
 ### Forgot Password [POST]
@@ -360,7 +360,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Register GcmId [/user/registergcmid]
 
 ### Register GcmId [POST]
@@ -404,7 +404,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Un-Register GcmId [/user/unregistergcmid]
 
 ### Un-Register GcmId [POST]
@@ -524,7 +524,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Cities [/masterdata/cities/{region_id}]
 
 ### List Cities by Region [GET]
@@ -570,7 +570,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-            
+
 ## Areas [/masterdata/areas/{city_id}]
 
 ### List Areas by Region [GET]
@@ -616,7 +616,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
-        
+
 ## Environments [/masterdata/environments]
 
 ### List All Environments [GET]
@@ -644,7 +644,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
-        
+
 ## Industries [/masterdata/industries]
 
 ### List All Industries [GET]
@@ -679,7 +679,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
 
 + Parameters
     + industry_id (number) - ID of the Industry in the form of an integer
-    
+
 + Response 200 (application/json)
 
         [
@@ -703,14 +703,14 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
-            
+
 ## Professions [/masterdata/professions/{industry_id}]
 
 ### List Professions by Industry [GET]
 
 + Parameters
     + industry_id (number) - ID of the Industry in the form of an integer
-    
+
 + Response 200 (application/json)
 
         [
@@ -734,7 +734,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
-            
+
 ## Degrees [/masterdata/degrees]
 
 ### List All Degrees [GET]
@@ -762,14 +762,14 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
-            
+
 ## Majors [/masterdata/majors/{degree_id}]
 
 ### List Majors by Degree [GET]
 
 + Parameters
     + degree_id (number) - ID of the Degree in the form of an integer
-    
+
 + Response 200 (application/json)
 
         [
@@ -793,7 +793,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
-            
+
 ## Languages [/masterdata/languages]
 
 ### List All Languages [GET]
@@ -821,7 +821,7 @@ YesJob is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
-            
+
 ## Group Company
 
 Resources related to questions in the API.
@@ -905,7 +905,7 @@ A Question object has the following attributes:
                     ]
                 }
             ]
-            
+
 ## Group Vacancy
 
 Resources related to questions in the API.
@@ -989,7 +989,7 @@ A Question object has the following attributes:
                     ]
                 }
             ]
-            
+
 ## Trending Vacancies [/vacancy/trending]
 
 ### List Trending Vacancies [GET]
@@ -1028,7 +1028,7 @@ A Question object has the following attributes:
                     ]
                 }
             ]
-            
+
 ## Archive Vacancies [/vacancy/archive]
 
 ### List Archive Vacancies [GET]
@@ -1108,7 +1108,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Matched Interested Vacancies [/vacancy/matched/{user_id}/interested]
 
 + Parameters
@@ -1142,7 +1142,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Matched Not-Interested Vacancies [/vacancy/matched/{user_id}/notinterested]
 
 + Parameters
@@ -1176,7 +1176,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Group User Profile
 
 Resources related to questions in the API.
@@ -1221,7 +1221,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Update Profile [/profile/{user_id}/update]
 
 + Parameters
@@ -1268,7 +1268,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Experiences [/profile/experiences/{user_id}]
 
 A Question object has the following attributes:
@@ -1309,7 +1309,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Experience [/profile/experience/{user_id}/add]
 
 + Parameters
@@ -1356,7 +1356,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Educations [/profile/educations/{user_id}]
 
 A Question object has the following attributes:
@@ -1397,7 +1397,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Education [/profile/education/{user_id}/add]
 
 + Parameters
@@ -1444,7 +1444,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Organizations [/profile/organizations/{user_id}]
 
 A Question object has the following attributes:
@@ -1485,7 +1485,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Organization [/profile/organization/{user_id}/add]
 
 + Parameters
@@ -1532,7 +1532,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Languages [/profile/languages/{user_id}]
 
 A Question object has the following attributes:
@@ -1573,7 +1573,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Language [/profile/language/{user_id}/add]
 
 + Parameters
@@ -1620,7 +1620,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Skills [/profile/skills/{user_id}]
 
 A Question object has the following attributes:
@@ -1661,7 +1661,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Skill [/profile/skill/{user_id}/add]
 
 + Parameters
@@ -1708,7 +1708,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Interested Industries [/profile/interested/industries/{user_id}]
 
 A Question object has the following attributes:
@@ -1749,7 +1749,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Interested Industry [/profile/interested/industry/{user_id}/add]
 
 + Parameters
@@ -1796,7 +1796,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Interested Skills [/profile/interested/skills/{user_id}]
 
 A Question object has the following attributes:
@@ -1837,7 +1837,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Interested Skill [/profile/interested/skill/{user_id}/add]
 
 + Parameters
@@ -1884,7 +1884,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Profile Interested Professions [/profile/interested/professions/{user_id}]
 
 A Question object has the following attributes:
@@ -1925,7 +1925,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Add Interested Profession [/profile/interested/profession/{user_id}/add]
 
 + Parameters
@@ -1972,7 +1972,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Group Account
 
 ## Account Detail [/user/me]
@@ -2005,7 +2005,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Update Account [/user/me/update]
 
 ### Update Account [POST]
@@ -2049,7 +2049,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Update Social Media [/user/me/updatesocmed]
 
 ### Update Social Media Account [POST]
@@ -2093,7 +2093,7 @@ A Question object has the following attributes:
                     }
                 ]
             }
-            
+
 ## Settings [/user/{user_id}/settings]
 
 ### View an Account Settings [GET]
@@ -2124,7 +2124,7 @@ A Question object has the following attributes:
                 }
             ]
         }
-        
+
 ## Update Setting [/user/{user_id}/settings/update]
 
 ### Update Account Settings [POST]
