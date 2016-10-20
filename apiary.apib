@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://api.yesjob.com/v1/
+HOST: http://api.yesjob.dev/v1/
 
 # YesJob Development API
 
@@ -36,9 +36,7 @@ curl --request POST \
         Connection: keep-alive
 
     + Body
-
-            form email=test@suitmedia.com
-            form password=test
+            \r\nContent-Disposition: form-data; name="email"\r\n\r\ntest@suitmedia.com\r\n-----011000010111000001101001\r\nContent-Disposition: form-data; name="password"\r\n\r\ntest\r\
 
 + Response 201 (application/json)
 
