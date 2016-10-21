@@ -20,12 +20,13 @@ Create a new authorization token for an authenticated user. This authorization t
 **Example:**
 
 ```
-curl --request POST \
-  --url http://api.yesjob.dev/user/login \
-  --header 'cache-control: no-cache' \
-  --header 'content-type: multipart/form-data' \
-  --form email=test@suitmedia.com \
-  --form password=test
+curl --include \
+     --request POST \
+     --url http://api.yesjob.dev/user/login \
+     --header "Content-Type: application/x-www-form-urlencoded" \
+     --header "Cache-Control: no-cache" \
+     --header "Connection: keep-alive" \
+     --data-binary "email=test%40suitmedia.com&password=test"
 ```
 
 + Request (application/x-www-form-urlencoded)
