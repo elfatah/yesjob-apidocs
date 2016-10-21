@@ -15,18 +15,18 @@ The Authorization Tokens based on web authentication scheme relies on HTTP's aut
 
 ### Create an Authorization Token [POST]
 
-Create a new authorization token for an authenticated user. This authorization token may be used to access protected resources.
+Create a new authorization token for an authenticated user. This authorization token may be used to access protected resources. The authorization for **email** and **password** urlencode must be encode bys using urlencoded.
 
 **Example:**
 
 ```
-curl --include \
-     --request POST \
-     --url http://api.yesjob.dev/user/login \
-     --header "Content-Type: application/x-www-form-urlencoded" \
-     --header "Cache-Control: no-cache" \
-     --header "Connection: keep-alive" \
-     --data-binary "email=test%40suitmedia.com&password=test"
+$ curl --include \
+  --request POST \
+  --url http://api.yesjob.dev/user/login \
+  --header "Content-Type: application/x-www-form-urlencoded" \
+  --header "Cache-Control: no-cache" \
+  --header "Connection: keep-alive" \
+  --data-binary "email=test%40suitmedia.com&password=test"
 ```
 
 + Request (application/x-www-form-urlencoded)
