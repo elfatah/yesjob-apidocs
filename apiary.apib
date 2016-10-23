@@ -513,48 +513,73 @@ $ curl --include \
                 }
             }
 
-## Un-Register GcmId [/user/unregistergcmid]
+## Un-Register GcmId [/user/unregistergcmid?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Un-Register GcmId [POST]
 
-+ Request (application/json)
+Remove Gcm Registration ID.
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+**Example:**
+
+```
+$ curl --include \
+  --request POST \
+  --url http://api.yesjob.suitdev.com/v1/user/unregistergcmid?token=3448bdc9e8097cf66d969118a8098187 \
+  --header "Content-Type: application/x-www-form-urlencoded" \
+  --header "Cache-Control: no-cache" \
+  --header "Connection: keep-alive" \
+  --data-binary "registration_id=12"
+```
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            registration_id=12
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "code": "20",
+                "message": "GCM Registration ID Deleted",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
             }
 
 ## Group Masterdata
