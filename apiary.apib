@@ -584,7 +584,7 @@ $ curl --include \
 
 ## Group Masterdata
 
-## Countries [/masterdata/countries?token={token}]
+## Country [/masterdata/countries?token={token}]
 
 + Parameters
 
@@ -604,29 +604,41 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+    + Headers
 
-## Regions [/masterdata/regions/{country_id}?token={token}]
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
+            }
+
+## Region [/masterdata/regions/{country_id}?token={token}]
 
 + Parameters
 
@@ -645,47 +657,43 @@ $ curl --request GET \
   --header "Cache-Control: no-cache"
 ```
 
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
             }
 
-## Cities [/masterdata/cities/{region_id}?token={token}]
+## City [/masterdata/cities/{region_id}?token={token}]
 
 + Parameters
 
@@ -704,47 +712,43 @@ $ curl --request GET \
   --header "Cache-Control: no-cache"
 ```
 
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
             }
 
-## Areas [/masterdata/areas/{city_id}?token={token}]
+## Area [/masterdata/areas/{city_id}?token={token}]
 
 + Parameters
 
@@ -763,47 +767,43 @@ $ curl --request GET \
   --header "Cache-Control: no-cache"
 ```
 
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
             }
 
-## Environments [/masterdata/environments?token={token}]
+## Environment [/masterdata/environments?token={token}]
 
 + Parameters
 
@@ -823,29 +823,41 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+    + Headers
 
-## Industries [/masterdata/industries?token={token}]
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
+            }
+
+## Industry [/masterdata/industries?token={token}]
 
 + Parameters
 
@@ -865,29 +877,41 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+    + Headers
 
-## Skills [/masterdata/skills/{industry_id}?token={token}]
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
+            }
+
+## Skill [/masterdata/skills/{industry_id}?token={token}]
 
 + Parameters
 
@@ -908,29 +932,41 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+    + Headers
 
-## Professions [/masterdata/professions/{industry_id}?token={token}]
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
+            }
+
+## Profession [/masterdata/professions/{industry_id}?token={token}]
 
 + Parameters
 
@@ -951,29 +987,41 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+    + Headers
 
-## Degrees [/masterdata/degrees?token={token}]
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
+            }
+
+## Degree [/masterdata/degrees?token={token}]
 
 + Parameters
 
@@ -993,29 +1041,41 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+    + Headers
 
-## Majors [/masterdata/majors/{degree_id}?token={token}]
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
+            }
+
+## Major [/masterdata/majors/{degree_id}?token={token}]
 
 + Parameters
 
@@ -1036,29 +1096,41 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+    + Headers
 
-## Languages [/masterdata/languages?token={token}]
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
+            }
+
+## Language [/masterdata/languages?token={token}]
 
 + Parameters
 
@@ -1078,27 +1150,39 @@ $ curl --request GET \
 
 + Response 200 (application/json)
 
-        [
+    + Headers
+
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
             }
-        ]
 
 ## Group Company
 
