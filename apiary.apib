@@ -66,7 +66,7 @@ $ curl --include \
                         "name": "John Doe",
                         "last_name": "Doe",
                         "birthdate": "0000-00-00",
-                        "email": "emailname@domain.com",
+                        "email": "test@suitmedia.com",
                         "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
                         "role": "admin",
                         "phone_number": "08123456789",
@@ -120,7 +120,7 @@ $ curl --include \
                         "name": "John Doe",
                         "last_name": "Doe",
                         "birthdate": "0000-00-00",
-                        "email": "emailname@domain.com",
+                        "email": "test@suitmedia.com",
                         "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
                         "role": "admin",
                         "phone_number": "08123456789",
@@ -174,7 +174,7 @@ $ curl --include \
                         "name": "John Doe",
                         "last_name": "Doe",
                         "birthdate": "0000-00-00",
-                        "email": "emailname@domain.com",
+                        "email": "test@suitmedia.com",
                         "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
                         "role": "admin",
                         "phone_number": "08123456789",
@@ -316,46 +316,56 @@ $ curl --include \
 
 ## Checking Email [/user/check/{email}]
 
-### Check Email [POST]
+Description: Checking Email
 
-+ Request (application/json)
+**Example:**
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/user/test@suitmedia.com \
+  --header "Cache-Control: no-cache"
+```
 
-+ Response 201 (application/json)
++ Parameters
+
+    + email: test@test.com (required, string) - Email of User in form of a string
+
+### Check by Eamil [GET]
+
++ Response 200 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "code": "20",
+                "message": "User profile retrieved",
+                "result": {
+                    "id": 1,
+                    "username": "johndoe",
+                    "name": "John Doe",
+                    "last_name": "Admin",
+                    "birthdate": "0000-00-00",
+                    "email": "test@suitmedia.com",
+                    "picture": "http://api.yesjob.dev/files/profilepicture/johndoe.jpg",
+                    "role": "admin",
+                    "phone_number": "08117304245",
+                    "registration_date": "2012-01-01 00:00:00",
+                    "last_visit": "2016-10-23 17:14:35",
+                    "status": "active",
+                    "escrow_amount": 500000,
+                    "fb_id": null,
+                    "tw_id": null,
+                    "gp_id": null,
+                    "referral_code": null,
+                    "referral_user_id": null,
+                    "created_at": "2014-09-22 03:30:25",
+                    "updated_at": "2016-10-23 17:14:35"
+                }
             }
 
 ## Verifying Email [/user/sendverification/{email}]
