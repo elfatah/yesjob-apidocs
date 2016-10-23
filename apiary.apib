@@ -1595,6 +1595,16 @@ $ curl --request GET \
 
 ### List Trending Vacancies [GET]
 
+Get json data trending of vacancies.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/vacancy/trending?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Response 200 (application/json)
 
     + Headers
@@ -1637,6 +1647,16 @@ $ curl --request GET \
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Archive Vacancies [GET]
+
+Get json data archieve of vacancies.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/vacancy/archieve?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
@@ -1682,6 +1702,16 @@ $ curl --request GET \
 
 ### List Matched Vacancies of User [GET]
 
+Get json data matched of vacancies for user login.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/vacancy/matched/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Response 200 (application/json)
 
         {
@@ -1716,7 +1746,17 @@ $ curl --request GET \
     + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
-### List Matched Interested Vacancies of User [GET]
+### List Matched Interested of Vacancies of User [GET]
+
+Get json data matched interested vacancies for user login.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/vacancy/matched/1/interested?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
@@ -1753,6 +1793,16 @@ $ curl --request GET \
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Matched Not-Interested Vacancies of User [GET]
+
+Get json data matched not-interested of vacancies for user login.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/vacancy/matched/1/notinterested?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
