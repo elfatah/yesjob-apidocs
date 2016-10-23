@@ -378,48 +378,70 @@ $ curl --request GET \
                 }
             }
 
-## Verifying Email [/user/sendverification/{email}]
+## Send Email Verification [/user/sendverification/{email}]
 
-### Send Verification [POST]
++ Parameters
 
-+ Request (application/json)
+    + email: test@test.com (required, string) - Email of User in form of a string
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+### Send Verification [GET]
 
-+ Response 201 (application/json)
+Description: Check by Email
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/user/sendverification/test@suitmedia.com \
+  --header "Cache-Control: no-cache"
+```
+
++ Response 200 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "code": "20",
+                "message": "Verification email sent!",
+                "result": null
+            }
+
+## Verifying Email [/user/verifyemail/{code}/{email}/process]
+
++ Parameters
+
+    + code: XCNCOD (required, string) - Activation Code
+    + email: test@test.com (required, string) - Email of User in form of a string
+
+### Verify Email [GET]
+
+Description: Check by Email
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/user/verifyemail/XCNCOD/test@suitmedia.com \
+  --header "Cache-Control: no-cache"
+```
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "Email verified!"
             }
 
 ## Register GcmId [/user/registergcmid]
