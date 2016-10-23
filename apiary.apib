@@ -600,7 +600,7 @@ A Country object has the following attributes:
 
 ### List All Countries [GET]
 
-Get json data countries
+Get json data countries.
 
 **Example:**
 
@@ -667,7 +667,7 @@ A Region object has the following attributes:
 
 ### List Regions by Country [GET]
 
-Get json data regions
+Get json data regions.
 
 **Example:**
 
@@ -734,7 +734,7 @@ A City object has the following attributes:
 
 ### List Cities by Region [GET]
 
-Get json data cities
+Get json data cities.
 
 **Example:**
 
@@ -801,7 +801,7 @@ A Area object has the following attributes:
 
 ### List Areas by Region [GET]
 
-Get json data areas
+Get json data areas.
 
 **Example:**
 
@@ -867,7 +867,7 @@ A Environment object has the following attributes:
 
 ### List All Environments [GET]
 
-Get json data environments
+Get json data environments.
 
 **Example:**
 
@@ -934,7 +934,7 @@ A Industry object has the following attributes:
 
 ### List All Industries [GET]
 
-Get json data industries
+Get json data industries.
 
 **Example:**
 
@@ -1002,7 +1002,7 @@ A Skill object has the following attributes:
 
 ### List Skills by Industry [GET]
 
-Get json data skills
+Get json data skills.
 
 **Example:**
 
@@ -1071,7 +1071,7 @@ A Profession object has the following attributes:
 
 ### List Professions by Industry [GET]
 
-Get json data professions
+Get json data professions.
 
 **Example:**
 
@@ -1138,7 +1138,7 @@ A Degree object has the following attributes:
 
 ### List All Degrees [GET]
 
-Get json data degrees
+Get json data degrees.
 
 **Example:**
 
@@ -1206,7 +1206,7 @@ A Major object has the following attributes:
 
 ### List Majors by Degree [GET]
 
-Get json data majors
+Get json data majors.
 
 **Example:**
 
@@ -1272,7 +1272,7 @@ A Language object has the following attributes:
 
 ### List All Languages [GET]
 
-Get json data languages
+Get json data languages.
 
 **Example:**
 
@@ -1394,6 +1394,16 @@ A Company object has the following attributes:
 
 ## Companies [/company/all?token={token}]
 
+Get json data companies.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/company/all?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Parameters
 
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
@@ -1505,6 +1515,16 @@ A Vacancy object has the following attributes:
         }
 
 ## Vacancies [/vacancy/all?token={token}]
+
+Get json data vacancies.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/vacancy/all?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Parameters
 
