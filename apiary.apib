@@ -1837,12 +1837,25 @@ Resources related to user in the API.
 
 ## User Profile [/profile/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Profile object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id INT(10) NOT NULL
++ user_id
++ about
++ gender
++ marital_status
++ religion
++ address_street
++ area_id
++ city_id
++ region_id
++ country_id
++ address_zipcode
++ height
++ weight
++ linkedin_url
++ created_at
++ updated_at
 
 + Parameters
 
@@ -1930,12 +1943,22 @@ A User object has the following attributes:
 
 ## Profile Experiences [/profile/experiences/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Experience object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ company
++ industry_id
++ profession_id
++ job_level_id
++ responsibilities
++ start_date
++ end_date
++ monthly_salary
++ is_current_job
++ resign_reason
++ created_at
++ updated_at
 
 + Parameters
 
@@ -2022,12 +2045,19 @@ A User object has the following attributes:
 
 ## Profile Educations [/profile/educations/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Education object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ degree_id
++ major_id
++ college
++ year_in
++ year_out
++ gpa
++ gpa_max_range
++ created_at
++ updated_at
 
 + Parameters
 
@@ -2114,12 +2144,17 @@ A User object has the following attributes:
 
 ## Profile Organizations [/profile/organizations/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Organization object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ name
++ position
++ responsibilities
++ start_date
++ end_date
++ created_at
++ updated_at
 
 + Parameters
 
@@ -2206,12 +2241,17 @@ A User object has the following attributes:
 
 ## Profile Languages [/profile/languages/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Language Capability object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ language_id
++ listen_capability
++ speak_capability
++ read_capability
++ write_capability
++ created_at
++ updated_at
 
 + Parameters
 
@@ -2298,12 +2338,15 @@ A User object has the following attributes:
 
 ## Profile Skills [/profile/skills/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Skill object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ skill_id
++ name
++ level
++ created_at
++ updated_at
 
 + Parameters
 
@@ -2390,12 +2433,13 @@ A User object has the following attributes:
 
 ## Profile Interested Industries [/profile/interested/industries/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Interested Industry object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ industry_id
++ created_at
++ updated_at
 
 + Parameters
 
@@ -2482,12 +2526,13 @@ A User object has the following attributes:
 
 ## Profile Interested Skills [/profile/interested/skills/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Interested Skll object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ skill_id
++ created_at
++ updated_at
 
 + Parameters
 
@@ -2574,12 +2619,13 @@ A User object has the following attributes:
 
 ## Profile Interested Professions [/profile/interested/professions/{user_id}?token={token}]
 
-A User object has the following attributes:
+A User Interested Profession object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ user_id
++ profession_id
++ created_at
++ updated_at
 
 + Parameters
 
