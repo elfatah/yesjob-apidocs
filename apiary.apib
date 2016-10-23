@@ -1911,44 +1911,54 @@ $ curl --request GET \
 
 ### Update User Profile [GET]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Experiences [/profile/experiences/{user_id}?token={token}]
@@ -2023,44 +2033,54 @@ $ curl --request GET \
 
 ### Add Experience of User [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Educations [/profile/educations/{user_id}?token={token}]
@@ -2132,44 +2152,54 @@ $ curl --request GET \
 
 ### Add Education of User [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Organizations [/profile/organizations/{user_id}?token={token}]
@@ -2239,44 +2269,54 @@ $ curl --request GET \
 
 ### Add Organization of User [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Languages [/profile/languages/{user_id}?token={token}]
@@ -2346,44 +2386,54 @@ $ curl --request GET \
 
 ### Add Language of User [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Skills [/profile/skills/{user_id}?token={token}]
@@ -2451,44 +2501,54 @@ $ curl --request GET \
 
 ### Add Skill of User [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Interested Industries [/profile/interested/industries/{user_id}?token={token}]
@@ -2554,44 +2614,54 @@ $ curl --request GET \
 
 ### Add Interested Industry of User [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Interested Skills [/profile/interested/skills/{user_id}?token={token}]
@@ -2657,44 +2727,54 @@ $ curl --request GET \
 
 ### Add Interested Skill of User [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Profile Interested Professions [/profile/interested/professions/{user_id}?token={token}]
@@ -2753,51 +2833,54 @@ $ curl --request GET \
 
 ## Add Interested Profession [/profile/interested/profession/{user_id}/add?token={token}]
 
-+ Parameters
++ Request (application/x-www-form-urlencoded)
 
-    + user_id: 1 (required, number) - ID of the User in form of an integer
-    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
+    + Headers
 
-### Add Interested Profession of User [POST]
+            Cache-Control: no-cache
+            Connection: keep-alive
 
-+ Request (application/json)
+    + Body
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "test@suitmedia.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Group Account
