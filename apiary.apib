@@ -1439,17 +1439,41 @@ A Company object has the following attributes:
 
 Resources related to vacancies in the API.
 
-## Vacancy [/vacancy/{id}]
+## Vacancy [/vacancy/{id}?token={token}]
 
-A Question object has the following attributes:
+A Vacancy object has the following attributes:
 
-+ vacancy
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ company_id
++ title
++ vacancy_status
++ region_id
++ city_id
++ area_id
++ summary
++ responsibilities
++ environment_id
++ posting_date
++ due_date
++ status
++ show_company_logo
++ background_image
++ min_age
++ max_age
++ min_experience_years
++ max_experience_years
++ min_gpa_base_4
++ min_gpa_base_5
++ gender_qualification
++ min_expected_salary
++ max_expected_salary
++ created_at
++ updated_at
 
 + Parameters
+
     + id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View a Vacancy Detail [GET]
 
@@ -1480,7 +1504,11 @@ A Question object has the following attributes:
             ]
         }
 
-## Vacancies [/vacancy/all]
+## Vacancies [/vacancy/all?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List All Vacancies [GET]
 
