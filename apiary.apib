@@ -584,10 +584,24 @@ $ curl --include \
 
 ## Group Masterdata
 
-## Countries [/masterdata/countries]
+## Countries [/masterdata/countries?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List All Countries [GET]
 
+Get json data countries
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/countries?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Response 200 (application/json)
 
         [
@@ -612,12 +626,25 @@ $ curl --include \
             }
         ]
 
-## Regions [/masterdata/regions/{country_id}]
+## Regions [/masterdata/regions/{country_id}?token={token}]
+
++ Parameters
+
+    + country_id: 1 (number) - ID of Country as an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Regions by Country [GET]
 
-+ Parameters
-    + country_id (number) - ID of the Country in the form of an integer
+Get json data regions
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/regions/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Request (application/json)
 
         {
@@ -658,12 +685,25 @@ $ curl --include \
                 ]
             }
 
-## Cities [/masterdata/cities/{region_id}]
+## Cities [/masterdata/cities/{region_id}?token={token}]
+
++ Parameters
+
+    + region_id: 1 (number) - ID of Region as an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Cities by Region [GET]
 
-+ Parameters
-    + region_id (number) - ID of the Region in the form of an integer
+Get json data cities
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/cities/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Request (application/json)
 
         {
@@ -704,12 +744,25 @@ $ curl --include \
                 ]
             }
 
-## Areas [/masterdata/areas/{city_id}]
+## Areas [/masterdata/areas/{city_id}?token={token}]
+
++ Parameters
+
+    + city_id: 1 (number) - ID of City as an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Areas by Region [GET]
 
-+ Parameters
-    + city_id (number) - ID of the City in the form of an integer
+Get json data areas
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/areas/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Request (application/json)
 
         {
@@ -750,10 +803,24 @@ $ curl --include \
                 ]
             }
 
-## Environments [/masterdata/environments]
+## Environments [/masterdata/environments?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List All Environments [GET]
 
+Get json data environments
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/environments?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Response 200 (application/json)
 
         [
@@ -778,10 +845,24 @@ $ curl --include \
             }
         ]
 
-## Industries [/masterdata/industries]
+## Industries [/masterdata/industries?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List All Industries [GET]
 
+Get json data industries
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/industries?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Response 200 (application/json)
 
         [
@@ -806,12 +887,24 @@ $ curl --include \
             }
         ]
 
-## Skills [/masterdata/skills/{industry_id}]
+## Skills [/masterdata/skills/{industry_id}?token={token}]
+
++ Parameters
+
+    + industry_id: 1 (number) - ID of Industry as an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Skills by Industry [GET]
 
-+ Parameters
-    + industry_id (number) - ID of the Industry in the form of an integer
+Get json data skills
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/skills/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
@@ -837,12 +930,24 @@ $ curl --include \
             }
         ]
 
-## Professions [/masterdata/professions/{industry_id}]
+## Professions [/masterdata/professions/{industry_id}?token={token}]
+
++ Parameters
+
+    + industry_id: 1 (number) - ID of Industry as an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Professions by Industry [GET]
 
-+ Parameters
-    + industry_id (number) - ID of the Industry in the form of an integer
+Get json data professions
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/professions/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
@@ -868,10 +973,24 @@ $ curl --include \
             }
         ]
 
-## Degrees [/masterdata/degrees]
+## Degrees [/masterdata/degrees?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List All Degrees [GET]
 
+Get json data degrees
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/degrees?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Response 200 (application/json)
 
         [
@@ -896,12 +1015,24 @@ $ curl --include \
             }
         ]
 
-## Majors [/masterdata/majors/{degree_id}]
+## Majors [/masterdata/majors/{degree_id}?token={token}]
+
++ Parameters
+
+    + degree_id: 1 (number) - ID of Degree as an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Majors by Degree [GET]
 
-+ Parameters
-    + degree_id (number) - ID of the Degree in the form of an integer
+Get json data majors
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/majors/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
@@ -927,9 +1058,23 @@ $ curl --include \
             }
         ]
 
-## Languages [/masterdata/languages]
+## Languages [/masterdata/languages?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List All Languages [GET]
+
+Get json data languages
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/masterdata/languages?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
