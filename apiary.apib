@@ -219,48 +219,29 @@ $ curl --include \
 
 + Parameters
 
-    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User in form of a string
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Logout [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "code": "20",
+                "message": "Logout Success, session ended!"
             }
 
 ## Group Registration
