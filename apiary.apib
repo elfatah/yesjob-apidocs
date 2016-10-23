@@ -1359,6 +1359,16 @@ A Company object has the following attributes:
 
 ### View a Company Detail [GET]
 
+Get detail json data company.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/company/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
+
 + Response 200 (application/json)
 
         {
@@ -1486,6 +1496,16 @@ A Vacancy object has the following attributes:
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View a Vacancy Detail [GET]
+
+Get detail json data vacancy.
+
+**Example:**
+
+```
+$ curl --request GET \
+  --url http://api.yesjob.suitdev.com/v1/vacancy/1?token=c909b47fbc114a34370711be381f10fa \
+  --header "Cache-Control: no-cache"
+```
 
 + Response 200 (application/json)
 
