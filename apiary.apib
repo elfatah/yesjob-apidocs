@@ -246,11 +246,11 @@ $ curl --include \
 
 ## Group Registration
 
-## Register [/user/register]
+## User Registration [/user/register]
 
-### User Registration [POST]
+### Register [POST]
 
-Description: Registration
+Description: Register
 
 **Example:**
 
@@ -316,7 +316,13 @@ $ curl --include \
 
 ## Checking Email [/user/check/{email}]
 
-Description: Checking Email
++ Parameters
+
+    + email: test@test.com (required, string) - Email of User in form of a string
+
+### Check by Eamil [GET]
+
+Description: Check by Email
 
 **Example:**
 
@@ -325,12 +331,6 @@ $ curl --request GET \
   --url http://api.yesjob.suitdev.com/v1/user/check/test@suitmedia.com \
   --header "Cache-Control: no-cache"
 ```
-
-+ Parameters
-
-    + email: test@test.com (required, string) - Email of User in form of a string
-
-### Check by Eamil [GET]
 
 + Response 200 (application/json)
 
