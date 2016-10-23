@@ -1763,9 +1763,9 @@ $ curl --request GET \
 
 ## Group User Information
 
-Resources related to questions in the API.
+Resources related to user in the API.
 
-## User Profile [/profile/{user_id}]
+## User Profile [/profile/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -1775,7 +1775,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View User Profile [GET]
 
@@ -1806,10 +1808,13 @@ A Question object has the following attributes:
             ]
         }
 
-## Update Profile [/profile/{user_id}/update]
+## Update Profile [/profile/{user_id}/update?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
+
 
 ### Update User Profile [GET]
 
@@ -1853,7 +1858,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Experiences [/profile/experiences/{user_id}]
+## Profile Experiences [/profile/experiences/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -1863,7 +1868,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Experiences of User [GET]
 
@@ -1894,10 +1901,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Experience [/profile/experience/{user_id}/add]
+## Add Experience [/profile/experience/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Experience of User [POST]
 
@@ -1941,7 +1950,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Educations [/profile/educations/{user_id}]
+## Profile Educations [/profile/educations/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -1951,7 +1960,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Educations of User [GET]
 
@@ -1982,10 +1993,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Education [/profile/education/{user_id}/add]
+## Add Education [/profile/education/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Education of User [POST]
 
@@ -2029,7 +2042,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Organizations [/profile/organizations/{user_id}]
+## Profile Organizations [/profile/organizations/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -2039,7 +2052,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Organizations of User [GET]
 
@@ -2070,10 +2085,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Organization [/profile/organization/{user_id}/add]
+## Add Organization [/profile/organization/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Organization of User [POST]
 
@@ -2117,7 +2134,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Languages [/profile/languages/{user_id}]
+## Profile Languages [/profile/languages/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -2127,7 +2144,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Languages of User [GET]
 
@@ -2158,10 +2177,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Language [/profile/language/{user_id}/add]
+## Add Language [/profile/language/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Language of User [POST]
 
@@ -2205,7 +2226,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Skills [/profile/skills/{user_id}]
+## Profile Skills [/profile/skills/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -2215,7 +2236,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Skills of User [GET]
 
@@ -2246,10 +2269,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Skill [/profile/skill/{user_id}/add]
+## Add Skill [/profile/skill/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Skill of User [POST]
 
@@ -2293,7 +2318,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Interested Industries [/profile/interested/industries/{user_id}]
+## Profile Interested Industries [/profile/interested/industries/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -2303,7 +2328,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Interested Industries of User [GET]
 
@@ -2334,10 +2361,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Interested Industry [/profile/interested/industry/{user_id}/add]
+## Add Interested Industry [/profile/interested/industry/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Interested Industry of User [POST]
 
@@ -2381,7 +2410,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Interested Skills [/profile/interested/skills/{user_id}]
+## Profile Interested Skills [/profile/interested/skills/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -2391,7 +2420,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Interested Skills of User [GET]
 
@@ -2422,10 +2453,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Interested Skill [/profile/interested/skill/{user_id}/add]
+## Add Interested Skill [/profile/interested/skill/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Interested Skill of User [POST]
 
@@ -2469,7 +2502,7 @@ A Question object has the following attributes:
                 ]
             }
 
-## Profile Interested Professions [/profile/interested/professions/{user_id}]
+## Profile Interested Professions [/profile/interested/professions/{user_id}?token={token}]
 
 A Question object has the following attributes:
 
@@ -2479,7 +2512,9 @@ A Question object has the following attributes:
 + choices - An array of Choice objects.
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Interested Professions of User [GET]
 
@@ -2510,10 +2545,12 @@ A Question object has the following attributes:
             ]
         }
 
-## Add Interested Profession [/profile/interested/profession/{user_id}/add]
+## Add Interested Profession [/profile/interested/profession/{user_id}/add?token={token}]
 
 + Parameters
+
     + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Interested Profession of User [POST]
 
@@ -2559,7 +2596,11 @@ A Question object has the following attributes:
 
 ## Group Account
 
-## Account Detail [/user/me]
+## Account Detail [/user/me?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View an Account Detail [GET]
 
@@ -2590,7 +2631,11 @@ A Question object has the following attributes:
             ]
         }
 
-## Update Account [/user/me/update]
+## Update Account [/user/me/update?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Update Account [POST]
 
@@ -2634,7 +2679,11 @@ A Question object has the following attributes:
                 ]
             }
 
-## Update Social Media [/user/me/updatesocmed]
+## Update Social Media [/user/me/updatesocmed?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Update Social Media Account [POST]
 
@@ -2678,7 +2727,11 @@ A Question object has the following attributes:
                 ]
             }
 
-## Settings [/user/{user_id}/settings]
+## Settings [/user/{user_id}/settings?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View an Account Settings [GET]
 
@@ -2709,7 +2762,11 @@ A Question object has the following attributes:
             ]
         }
 
-## Update Setting [/user/{user_id}/settings/update]
+## Update Setting [/user/{user_id}/settings/update?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Update Account Settings [POST]
 
