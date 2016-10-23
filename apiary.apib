@@ -1354,7 +1354,7 @@ A Company object has the following attributes:
 
 + Parameters
 
-    + id: 1 (required, number) - ID of the Question in form of an integer
+    + id: 1 (required, number) - ID of the Company in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View a Company Detail [GET]
@@ -1492,7 +1492,7 @@ A Vacancy object has the following attributes:
 
 + Parameters
 
-    + id: 1 (required, number) - ID of the Question in form of an integer
+    + id: 1 (required, number) - ID of the Vacancy in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View a Vacancy Detail [GET]
@@ -1677,7 +1677,7 @@ $ curl --request GET \
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Matched Vacancies of User [GET]
@@ -1713,7 +1713,7 @@ $ curl --request GET \
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Matched Interested Vacancies of User [GET]
@@ -1749,7 +1749,7 @@ $ curl --request GET \
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Matched Not-Interested Vacancies of User [GET]
@@ -1787,7 +1787,7 @@ Resources related to user in the API.
 
 ## User Profile [/profile/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -1796,7 +1796,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View User Profile [GET]
@@ -1832,7 +1832,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 
@@ -1880,7 +1880,7 @@ A Question object has the following attributes:
 
 ## Profile Experiences [/profile/experiences/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -1889,7 +1889,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Experiences of User [GET]
@@ -1925,7 +1925,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Experience of User [POST]
@@ -1972,7 +1972,7 @@ A Question object has the following attributes:
 
 ## Profile Educations [/profile/educations/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -1981,7 +1981,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Educations of User [GET]
@@ -2017,7 +2017,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Education of User [POST]
@@ -2064,7 +2064,7 @@ A Question object has the following attributes:
 
 ## Profile Organizations [/profile/organizations/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -2073,7 +2073,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Organizations of User [GET]
@@ -2109,7 +2109,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Organization of User [POST]
@@ -2156,7 +2156,7 @@ A Question object has the following attributes:
 
 ## Profile Languages [/profile/languages/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -2165,7 +2165,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Languages of User [GET]
@@ -2201,7 +2201,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Language of User [POST]
@@ -2248,7 +2248,7 @@ A Question object has the following attributes:
 
 ## Profile Skills [/profile/skills/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -2257,7 +2257,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Skills of User [GET]
@@ -2293,7 +2293,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Skill of User [POST]
@@ -2340,7 +2340,7 @@ A Question object has the following attributes:
 
 ## Profile Interested Industries [/profile/interested/industries/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -2349,7 +2349,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Interested Industries of User [GET]
@@ -2385,7 +2385,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Interested Industry of User [POST]
@@ -2432,7 +2432,7 @@ A Question object has the following attributes:
 
 ## Profile Interested Skills [/profile/interested/skills/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -2441,7 +2441,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Interested Skills of User [GET]
@@ -2477,7 +2477,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Interested Skill of User [POST]
@@ -2524,7 +2524,7 @@ A Question object has the following attributes:
 
 ## Profile Interested Professions [/profile/interested/professions/{user_id}?token={token}]
 
-A Question object has the following attributes:
+A User object has the following attributes:
 
 + vacancy
 + published_at - An ISO8601 date when the question was published.
@@ -2533,7 +2533,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List Interested Professions of User [GET]
@@ -2569,7 +2569,7 @@ A Question object has the following attributes:
 
 + Parameters
 
-    + user_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Add Interested Profession of User [POST]
@@ -2751,6 +2751,7 @@ A Question object has the following attributes:
 
 + Parameters
 
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View an Account Settings [GET]
@@ -2786,6 +2787,7 @@ A Question object has the following attributes:
 
 + Parameters
 
+    + user_id: 1 (required, number) - ID of the User in form of an integer
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### Update Account Settings [POST]
