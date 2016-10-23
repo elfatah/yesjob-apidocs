@@ -250,6 +250,20 @@ $ curl --include \
 
 ### User Registration [POST]
 
+Description: Registration
+
+**Example:**
+
+```
+$ curl --include \
+  --request POST \
+  --url http://api.yesjob.suitdev.com/v1/user/register \
+  --header "Content-Type: application/x-www-form-urlencoded" \
+  --header "Cache-Control: no-cache" \
+  --header "Connection: keep-alive" \
+  --data-binary "email=johndoe%40test.com&password=secret&birth_date=1991-11-11"
+```
+
 + Request (application/x-www-form-urlencoded)
 
     + Headers
@@ -259,7 +273,7 @@ $ curl --include \
 
     + Body
 
-            email=johndoe%40gmail.com&password=secret&birth_date=1991-11-11
+            email=johndoe%40test.com&password=secret&birth_date=1991-11-11
 
 + Response 201 (application/json)
 
@@ -281,7 +295,7 @@ $ curl --include \
                         "name": "John Doe",
                         "last_name": "Doe",
                         "birthdate": "1991-11-11",
-                        "email": "emailname@domain.com",
+                        "email": "johndoe@test.com",
                         "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
                         "role": "admin",
                         "phone_number": "",
