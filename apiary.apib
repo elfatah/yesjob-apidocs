@@ -652,6 +652,14 @@ $ curl --request GET \
 
 ## Region [/masterdata/regions/{country_id}?token={token}]
 
+A Region object has the following attributes:
+
+- id
+- country_id
+- name
+- created_at
+- updated_at
+
 + Parameters
 
     + country_id: 1 (number) - ID of Country as an integer
@@ -710,6 +718,14 @@ $ curl --request GET \
             }
 
 ## City [/masterdata/cities/{region_id}?token={token}]
+
+A City object has the following attributes:
+
+- id
+- region_id
+- name
+- created_at
+- updated_at
 
 + Parameters
 
@@ -770,6 +786,14 @@ $ curl --request GET \
 
 ## Area [/masterdata/areas/{city_id}?token={token}]
 
+A Area object has the following attributes:
+
+- id
+- city_id
+- name
+- created_at
+- updated_at
+
 + Parameters
 
     + city_id: 1 (number) - ID of City as an integer
@@ -829,6 +853,14 @@ $ curl --request GET \
 
 ## Environment [/masterdata/environments?token={token}]
 
+A Environment object has the following attributes:
+
+- id
+- name
+- description
+- created_at
+- updated_at
+
 + Parameters
 
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
@@ -887,6 +919,15 @@ $ curl --request GET \
 
 ## Industry [/masterdata/industries?token={token}]
 
+A Industry object has the following attributes:
+
+- id
+- parent_id
+- name
+- description
+- created_at
+- updated_at
+
 + Parameters
 
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
@@ -944,6 +985,15 @@ $ curl --request GET \
             }
 
 ## Skill [/masterdata/skills/{industry_id}?token={token}]
+
+A Skill object has the following attributes:
+
+- id
+- industry_id
+- name
+- description
+- created_at
+- updated_at
 
 + Parameters
 
@@ -1004,6 +1054,16 @@ $ curl --request GET \
 
 ## Profession [/masterdata/professions/{industry_id}?token={token}]
 
+A Profession object has the following attributes:
+
+- id
+- parent_id
+- industry_id
+- name
+- description
+- created_at
+- updated_at
+
 + Parameters
 
     + industry_id: 1 (number) - ID of Industry as an integer
@@ -1063,6 +1123,15 @@ $ curl --request GET \
 
 ## Degree [/masterdata/degrees?token={token}]
 
+A Degree object has the following attributes:
+
+- id
+- type
+- name
+- description
+- created_at
+- updated_at
+
 + Parameters
 
     + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
@@ -1120,6 +1189,15 @@ $ curl --request GET \
             }
 
 ## Major [/masterdata/majors/{degree_id}?token={token}]
+
+A Major object has the following attributes:
+
+- id
+- degree_id
+- name
+- description
+- created_at
+- updated_at
 
 + Parameters
 
@@ -1179,6 +1257,14 @@ $ curl --request GET \
             }
 
 ## Language [/masterdata/languages?token={token}]
+
+A Language object has the following attributes:
+
+- id
+- name
+- description
+- created_at
+- updated_at
 
 + Parameters
 
