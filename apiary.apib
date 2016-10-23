@@ -654,11 +654,11 @@ $ curl --request GET \
 
 A Region object has the following attributes:
 
-- id
-- country_id
-- name
-- created_at
-- updated_at
++ id
++ country_id
++ name
++ created_at
++ updated_at
 
 + Parameters
 
@@ -721,11 +721,11 @@ $ curl --request GET \
 
 A City object has the following attributes:
 
-- id
-- region_id
-- name
-- created_at
-- updated_at
++ id
++ region_id
++ name
++ created_at
++ updated_at
 
 + Parameters
 
@@ -788,11 +788,11 @@ $ curl --request GET \
 
 A Area object has the following attributes:
 
-- id
-- city_id
-- name
-- created_at
-- updated_at
++ id
++ city_id
++ name
++ created_at
++ updated_at
 
 + Parameters
 
@@ -855,11 +855,11 @@ $ curl --request GET \
 
 A Environment object has the following attributes:
 
-- id
-- name
-- description
-- created_at
-- updated_at
++ id
++ name
++ description
++ created_at
++ updated_at
 
 + Parameters
 
@@ -921,12 +921,12 @@ $ curl --request GET \
 
 A Industry object has the following attributes:
 
-- id
-- parent_id
-- name
-- description
-- created_at
-- updated_at
++ id
++ parent_id
++ name
++ description
++ created_at
++ updated_at
 
 + Parameters
 
@@ -988,12 +988,12 @@ $ curl --request GET \
 
 A Skill object has the following attributes:
 
-- id
-- industry_id
-- name
-- description
-- created_at
-- updated_at
++ id
++ industry_id
++ name
++ description
++ created_at
++ updated_at
 
 + Parameters
 
@@ -1056,13 +1056,13 @@ $ curl --request GET \
 
 A Profession object has the following attributes:
 
-- id
-- parent_id
-- industry_id
-- name
-- description
-- created_at
-- updated_at
++ id
++ parent_id
++ industry_id
++ name
++ description
++ created_at
++ updated_at
 
 + Parameters
 
@@ -1125,12 +1125,12 @@ $ curl --request GET \
 
 A Degree object has the following attributes:
 
-- id
-- type
-- name
-- description
-- created_at
-- updated_at
++ id
++ type
++ name
++ description
++ created_at
++ updated_at
 
 + Parameters
 
@@ -1192,12 +1192,12 @@ $ curl --request GET \
 
 A Major object has the following attributes:
 
-- id
-- degree_id
-- name
-- description
-- created_at
-- updated_at
++ id
++ degree_id
++ name
++ description
++ created_at
++ updated_at
 
 + Parameters
 
@@ -1260,11 +1260,11 @@ $ curl --request GET \
 
 A Language object has the following attributes:
 
-- id
-- name
-- description
-- created_at
-- updated_at
++ id
++ name
++ description
++ created_at
++ updated_at
 
 + Parameters
 
@@ -1324,19 +1324,38 @@ $ curl --request GET \
 
 ## Group Company
 
-Resources related to questions in the API.
+Resources related to companies in the API.
 
-## Company [/company/{id}]
+## Company [/company/{id}?token{token}]
 
-A Question object has the following attributes:
+A Company object has the following attributes:
 
-+ company
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
++ id
++ shortname
++ name
++ legal_name
++ description
++ contact_email_address
++ contact_phone_number
++ website
++ hq_address_street
++ hq_address_area_id
++ hq_address_city_id
++ hq_address_region_id
++ hq_country_id
++ founded
++ company_size
++ type
++ specialities
++ logo_url
++ status
++ created_at
++ updated_at
 
 + Parameters
+
     + id: 1 (required, number) - ID of the Question in form of an integer
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### View a Company Detail [GET]
 
@@ -1373,7 +1392,11 @@ A Question object has the following attributes:
                 }
             }
 
-## Companies [/company/all]
+## Companies [/company/all?token={token}]
+
++ Parameters
+
+    + token: 3448bdc9e8097cf66d969118a8098187 (required, string) - Token of User as a string
 
 ### List All Companies [GET]
 
@@ -1414,7 +1437,7 @@ A Question object has the following attributes:
 
 ## Group Vacancy
 
-Resources related to questions in the API.
+Resources related to vacancies in the API.
 
 ## Vacancy [/vacancy/{id}]
 
