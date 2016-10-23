@@ -63,7 +63,7 @@ $ curl --include \
                     "user": {
                         "id": 1,
                         "username": "johndoe",
-                        "name": "John",
+                        "name": "John Doe",
                         "last_name": "Doe",
                         "birthdate": "0000-00-00",
                         "email": "emailname@domain.com",
@@ -117,7 +117,7 @@ $ curl --include \
                     "user": {
                         "id": 1,
                         "username": "johndoe",
-                        "name": "John",
+                        "name": "John Doe",
                         "last_name": "Doe",
                         "birthdate": "0000-00-00",
                         "email": "emailname@domain.com",
@@ -171,7 +171,7 @@ $ curl --include \
                     "user": {
                         "id": 1,
                         "username": "johndoe",
-                        "name": "John",
+                        "name": "John Doe",
                         "last_name": "Doe",
                         "birthdate": "0000-00-00",
                         "email": "emailname@domain.com",
@@ -250,44 +250,54 @@ $ curl --include \
 
 ### User Registration [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            email=johndoe%40gmail.com&password=secret&birth_date=1991-11-11
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "User registered!",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 2,
+                        "username": "johndoe",
+                        "name": "John Doe",
+                        "last_name": "Doe",
+                        "birthdate": "1991-11-11",
+                        "email": "emailname@domain.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Checking Email [/user/check/{email}]
