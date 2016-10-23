@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://api.yesjob.dev/v1/
+HOST: http://api.yesjob.suitdev.com/v1/
 
 # YesJob Development API
 
@@ -7,9 +7,15 @@ This section documents YesJob's API, for developers who want to write code that 
 
 ## Group Authentication
 
+The YesJob’s authentication has 2 authorization system including:
++ Web Authentication (Authorization Token)
++ Identity Providers (Social Media), include:
+    - Facebook
+    - Twitter
+
 ## Authorization Tokens [/user/login]
 
-The YesJob API offers a very simple way of authenticating the API that should only be used for testing and development purposes. When building an application you should ultimately use the OAuth authentication scheme for allowing YesJobs users to grant access to their data for your application. Note that this authentication scheme is off by default for every YesJob user.
+The YesJob API offers a very simple way of authenticating the API that should only be used for testing and development purposes.. Note that this authentication scheme is off by default for every YesJob user.
 
 The Authorization Tokens based on web authentication scheme relies on HTTP's authentication [RFC](http://www.ietf.org/rfc/rfc2617.txt) to authenticate clients of the YesJob API using a YesJob **email** and **password**. This authentication scheme may be limited or turned off by default in future versions of the YesJob platform and therefore should not be relied upon for production application development. It is a very simple and useful way to get started with the API.
 
@@ -22,7 +28,7 @@ Create a new authorization token for an authenticated user. This authorization t
 ```
 $ curl --include \
   --request POST \
-  --url http://api.yesjob.dev/user/login \
+  --url http://api.yesjob.suitdev.com/v1/user/login \
   --header "Content-Type: application/x-www-form-urlencoded" \
   --header "Cache-Control: no-cache" \
   --header "Connection: keep-alive" \
@@ -33,18 +39,19 @@ $ curl --include \
 
     + Headers
 
-        Cache-Control: no-cache
-        Connection: keep-alive
+            Cache-Control: no-cache
+            Connection: keep-alive
 
     + Body
-        email=test%40suitmedia.com&password=test
+
+            email=test%40suitmedia.com&password=test
 
 + Response 201 (application/json)
 
     + Headers
 
-        Accept-Charset: utf-8
-        Connection: keep-alive
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
@@ -82,88 +89,130 @@ $ curl --include \
 
 ### Facebook Auth [POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            facebook_id=fbid&facebook_token=token&name=name
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "emailname@domain.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
             }
 
 ## Twitter Auth [/user/twlogin]
 
 ### Twitter Auth[POST]
 
-+ Request (application/json)
++ Request (application/x-www-form-urlencoded)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+    + Headers
+
+            Cache-Control: no-cache
+            Connection: keep-alive
+
+    + Body
+
+            twitter_id=twid&twitter_token=token&twitter_secret=secret&name=name
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Accept-Charset: utf-8
+            Connection: keep-alive
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "code": "20",
+                "message": "Login Success",
+                "result": {
+                    "token": "8eed081e0b697e4a785fa27128b79c43",
+                    "user": {
+                        "id": 1,
+                        "username": "johndoe",
+                        "name": "John",
+                        "last_name": "Doe",
+                        "birthdate": "0000-00-00",
+                        "email": "emailname@domain.com",
+                        "picture": "http://api.yesjob.suitdev.com/v1/files/profilepicture/johndoe.jpg",
+                        "role": "admin",
+                        "phone_number": "08123456789",
+                        "registration_date": "0000-00-00 00:00:00",
+                        "last_visit": "0000-00-01 00:00:00",
+                        "status": "active",
+                        "escrow_amount": 500000,
+                        "fb_id": null,
+                        "tw_id": null,
+                        "gp_id": null,
+                        "referral_code": null,
+                        "referral_user_id": null,
+                        "created_at": "0000-00-00 00:00:00",
+                        "updated_at": "0000-00-00 00:00:00"
                     }
-                ]
+                }
+            }
+
+## Forgotted Password [/user/forgotpassword/{email}]
+
++ Parameters
+
+    + email: test@test.com (required, string) - Email of User in form of a string
+
+### Forgot Password [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Charset: utf-8
+            Connection: keep-alive
+
+    + Body
+
+            {
+                "code": "20",
+                "message": "Reset password email sent!"
             }
 
 ## Sign-Out [/user/logout]
@@ -303,50 +352,6 @@ $ curl --include \
 ## Verifying Email [/user/sendverification/{email}]
 
 ### Send Verification [POST]
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
-
-## Forgotted Password [/user/forgotpassword/{email}]
-
-### Forgot Password [POST]
 
 + Request (application/json)
 
